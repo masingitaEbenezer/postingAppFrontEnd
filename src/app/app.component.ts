@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { number, any } from 'prop-types';
-
+import { LikeComponent } from './like/like.component';
 
 class Post {
   id: number;
@@ -65,7 +65,17 @@ export class AppComponent {
     console.log( i );
   }
 
+  numberofLikes: number = 0;
 
+  likeButtonClick() {
+    
+    this.numberofLikes++;
+  }
+
+  disLikeButtonClick () {
+    if(this.numberofLikes>0)
+    this.numberofLikes--;
+  }
 
 
 
